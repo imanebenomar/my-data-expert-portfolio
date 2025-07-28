@@ -6,23 +6,16 @@ highlighter:      rouge
 permalink:        pretty
 
 # Setup
-title:            Divya Godayal
+title:            Imane BENOMAR
 tagline:          'Portfolio'
 url:              https://dg.github.io/
-poemsurl:         /poems/
 
 author:
-  name:           'Divya Godayal'
-  url:            https://twitter.com/mdo
-  gravatar_md5:   2208002d2efae6ba2be8eff453c5b7f9
-  github:         DivyaGodayal
-  linkedin:       divyagodayal
-  smule:          __DivyaGodayal__  
-  medium:         divyagodayal        
-  facebook:       godayaldivya
+  name:           'Imane BENOMAR'
+  github:         imanebenomar
+  linkedin:       imanebenomar
 
 paginate:         5
-paginate_path: "/poems/page:num/"
 
 # Custom vars
 version:          2.1.0

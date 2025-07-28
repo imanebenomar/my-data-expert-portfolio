@@ -1,7 +1,7 @@
 
 <div class="sidebar">
   <div class="sidebar-logo" style="align:center">
-        <img src="https://www.gravatar.com/avatar/{{ site.author.gravatar_md5 }}?s=350" />
+        <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Image" style="width:150px; border-radius:50%;" />
   </div>
   <div id="contact-list1" style="text-align:center">
     <!-- contact icons go here --> 
@@ -19,41 +19,6 @@
           </span>
       </a>
     {% endif %}
-    {% if site.author.medium %}
-      <a href="https://www.medium.com/@{{ site.author.medium }}" target="_blank">
-          <span class="fa-stack fa-medium">
-              <i class="fab fa-medium fa-stack-2x"></i>
-          </span>
-      </a>
-    {% endif %}
-    {% if site.author.instagram %}
-      <a href="https://www.instagram.com/{{ site.author.instagram }}" target="_blank">
-          <span class="fa-stack fa-medium">
-              <i class="fab fa-instagram fa-stack-2x"></i>
-          </span>
-      </a>
-    {% endif %}
-    {% if site.author.twitter %}
-      <a href="https://www.twitter.com/{{ site.author.twitter }}" target="_blank">
-          <span class="fa-stack fa-medium">
-              <i class="fab fa-twitter fa-stack-2x"></i>
-          </span>
-      </a>
-    {% endif %}
-    {% if site.author.smule %}
-      <a href="https://www.smule.com/{{ site.author.smule }}" target="_blank">
-         <span class="fa-stack fa-medium">
-            <i class="fas fa-music fa-stack-2x"></i>
-         </span>
-      </a>
-    {% endif %}
-    {% if site.author.facebook %}
-      <a href="https://www.facebook.com/{{ site.author.facebook }}" target="_blank">
-         <span class="fa-stack fa-medium">
-            <i class="fab fa-facebook-square fa-stack-2x"></i>
-         </span>
-      </a>
-    {% endif %}	
   </div>
   <div class="container">
     <div class="sidebar-about">
@@ -83,9 +48,7 @@
       {% endfor %}
       <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#skill-section">&nbsp&nbsp&nbsp&nbsp- Skills</a>
       <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#timeline-section">&nbsp&nbsp&nbsp&nbsp- Experience</a>
-      <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#projects-section">&nbsp&nbsp&nbsp&nbsp- Projects</a>
-      <a class="sidebar-nav-item{% if page.url == '/technology/' | relative_url %} active{% endif %}" href="/technology/">Tech Blogs</a>
-      <a class="sidebar-nav-item{% if page.url == '/poems/' | relative_url %} active{% endif %}" href="/poems/">Poems</a>	
+     <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#blog-section">&nbsp&nbsp&nbsp&nbsp- Blog</a>
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
@@ -99,16 +62,16 @@ var typewriter = new Typewriter(app, {
     loop: true
 });
 
-typewriter.typeString('I am a Coder')
+typewriter.typeString('I am a Data engineer')
     .pauseFor(2500)
-    .deleteChars(5)
-    .typeString('Drummer')
+    .deleteChars(13)
+    .typeString('Data architect')
+    .pauseFor(2500)
+    .deleteChars(14)
+    .typeString('DataOps')
     .pauseFor(2500)
     .deleteChars(7)
-    .typeString('Poet')
-    .pauseFor(2500)
-    .deleteChars(4)
-    .typeString('Singer')
+    .typeString('Analytics engineer')
     .pauseFor(2500)
     .start();
 </script>
