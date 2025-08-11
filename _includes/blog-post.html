@@ -1,0 +1,17 @@
+<div class="card">
+    <a href="{{ include.post.url | relative_url }}" target="_blank">
+        <div class="card-image">
+            <img src="/assets/images/profile.jpg" alt="{{ include.post.title }}" />
+        </div>
+    </a>
+    <div class="card-body">
+        <div class="card-title">
+            <h3>{{ include.post.title }}</h3>
+            <span> - {{ include.post.date | date: "%B %d, %Y" }}</span>
+        </div>
+        <div class="card-excerpt">
+            <p>{{ include.post.summary }}</p>
+        </div>
+        <a class="btn" href="{{ include.post.url | relative_url }}" target="_blank">Blog Post</a>
+    </div>
+</div>

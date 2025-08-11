@@ -11,9 +11,9 @@
  }
  
  .sidebar-logo img {
-   border-radius: 50%;
-   -moz-border-radius: 50%;
-   -webkit-border-radius: 50%;
+   border-radius: 60%;
+   -moz-border-radius: 60%;
+   -webkit-border-radius: 60%;
    width: 10rem;
    margin: 0 auto;
  }
@@ -24,16 +24,15 @@
 }
 
 .introduction{
-  text-align: center;
+  text-align: justify;
+  color: #000000;
 }
 
 .resume-section h1 {
   font-weight: lighter;
   font-size: 1.5rem;
   text-align: left;
-  color: white;
-  /*background-color: #505050;*/
-  background: linear-gradient(to right, #282828, #d3d3d3);
+  color: #000000;
   padding-top: 20px;
   padding-bottom: 10px;
   margin-top: 2rem;
@@ -51,7 +50,7 @@
 .sub-header{
   font-size: 1.3rem;
   font-weight: lighter;
-  color: #505050;
+  color: #000000;
 }
 
 *,
@@ -67,7 +66,7 @@
   border: none;
   cursor: pointer;
   outline: none;
-  color: #080808;
+  color: #000000;
   margin-top: 2em;
 }
 
@@ -88,16 +87,70 @@
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-.company-name {
-	margin-top: -0.1em;
-	margin-bottom: 0;
+.section {
+	margin-top: 50px;
+	margin-bottom: 1.5;
+  color: #000000;
 }
 
+.strong {
+  color: #000000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  align-items: center;
+  margin-right: -2px;
+  margin-top: -2px;
+}
+
+.strongs {
+  color: #C5BDDB;
+  font-weight: bold;
+}
+
+.division {
+  margin-top: 50px;
+	margin-bottom: 0.1;
+}
+
+.role {
+  color: #C5BDDB;
+  font-weight: bold;
+}
+
+.company-name {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
 .timeline-date {
 	margin-top: -0.4em;
-	margin-bottom: 0;
-	color: #606060;
+	margin-bottom: 0.3em;
+	color:#F2D1CE;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stack {
+  color: #000000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .heading {
@@ -107,220 +160,106 @@
 	font-size: 1.2em;
 }
 
-.odd {
-	max-height: 15em;
-}
-
-.timeline-content {
-	text-align: left;
-	margin-top: 0.5em;
-	margin-bottom: 0em;
-    word-wrap: break-word;
-    color: #808080;
+.description {
+	margin-top: -0.1em;
+	margin-bottom: 0;
+  color: #000000;
+  margin-right: 1em;
+  text-align: left;
+  word-wrap: break-word;
 }
 
 .logo {
 	border-radius: 50%;
-	width: 15%;
-	height: 25%;
+  border: 3px solid #C5BDDB;
+	width: 7%;
+	height: 7%;
 	float: left;
 	margin-right: 1em;
-	margin-bottom: 0;
+	margin-bottom: 1em;
 	margin-top: 1em;
 }
 
-.timeline {
-  white-space: nowrap;
-  overflow-x: hidden;
+.logo-certif {
+	border-radius: 50%;
+	width: 7%;
+	height: 7%;
+	float: left;
+	margin-right: 1em;
 }
-
-.timeline ol {
-  font-size: 0;
-  width: 100vw;
-  padding: 14rem 0;
-  transition: all 1s;
-}
-
-.timeline ol li {
-  position: relative;
-  display: inline-block;
-  list-style-type: none;
-  width: 12rem;
-  height: 3px;
-  background: #fff;
-}
-
-.timeline ol li:last-child {
-  width: 20rem;
-}
-
-.timeline ol li:not(:first-child) {
-  margin-left: 14px;
-}
-
-.timeline ol li:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: calc(100% + 1px);
-  bottom: 0;
-  width: 12px;
-  height: 12px;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  background: #A9A9A9;
-}
-
-/*.timeline-container {
-  margin-bottom: 3em;
-}*/
-
-.timeline ol li div {
-  position: absolute;
-  left: calc(100% + 7px);
-  width: 20em;
-  max-height: 12.7em;
-  padding: 1em;
-  font-size: 1rem;
-  white-space: normal;
-  color: black;
-  background: white;
-}
-
-.timeline ol li div::before {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.timeline ol li:nth-child(odd) div {
-  top: -16px;
-  height: 500px;
-  transform: translateY(-100%);
-}
-
-.timeline ol li:nth-child(odd) div::before {
-  top: 100%;
-  border-width: 8px 8px 0 0;
-  border-color: white transparent transparent transparent;
-}
-
-.timeline ol li:nth-child(even) div {
-  top: calc(100% + 16px);
-}
-
-.timeline ol li:nth-child(even) div::before {
-  top: -8px;
-  border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent white;
-}
-
-.timeline time {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-
-/* TIMELINE ARROWS
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.timeline .arrows {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.timeline .arrows .arrow__prev {
-  margin-right: 20px;
-}
-
-.timeline .disabled {
-  opacity: .5;
-}
-
-.timeline .arrows img {
-  width: 45px;
-  height: 45px;
-}
-
 
 /* GENERAL MEDIA QUERIES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 599px) {
-  .timeline ol,
-  .timeline ol li {
-    width: auto !important; 
-  }
   
-  .timeline ol {
-    padding: 0;
-    transform: none !important;
-  }
-  
-  .timeline ol li {
-    display: block;
-    height: auto;
-    background: transparent;
-  }
-  
-  .timeline ol li:first-child {
-    margin-top: 25px;
-  }
-  
-  .timeline ol li:not(:first-child) {
-    margin-left: auto;
-  }
-  
-  .timeline ol li div {
+  .timeline div {
     width: 94%;
     height: auto !important;
-    margin: 0 auto 25px;
   }
   
-  .timeline ol li div {
-    position: static;
-  }
-  
-  .timeline ol li:nth-child(odd) div {
-    transform: none;
-  }
-  
-  .timeline ol li:nth-child(odd) div::before,
-  .timeline ol li:nth-child(even) div::before {
-    left: 50%;
-    top: 100%;
-    transform: translateX(-50%);
-    border: none;
-    border-left: 1px solid white;
-    height: 25px;
-  }
-  
-  .timeline ol li:last-child,
-  .timeline ol li:nth-last-child(2) div::before,
-  .timeline ol li:not(:last-child)::after,
-  .timeline .arrows {
-    display: none;
-  }
+}
+
+/*Skill section CSS*/
+
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.skill-container {
+    margin-bottom: 6px;
+}
+
+.skills-text{
+  padding-left: 5px;
+}
+
+/* Contact page */
+.input {
+  width: 100%;  
+  margin: 0 auto;
+  padding: 0.60rem;
+  border-radius: 8px;
+  font-size: 1rem; 
+  box-sizing: border-box;
+}
+
+.label {
+  display: block;  
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.button {
+  background-color: #000000;
+  color:#F2D1CE;
+  padding: 0.5rem 1rem;
+  border:  #F2D1CE;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.textt {
+  color:  #C5BDDB;
+  font-weight: bold;
 }
 
 /* Project Cards */
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
-	@import url("https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 	body {
-	background: #eee;
+	background:#F0E9CE;
 	padding: 40px 0px;
+  font-family: 'Anton';
 }
 .card {
 	width: 22em;
 	margin: 0px auto;
-	background-color: white;
-	box-shadow: 0px 5px 20px #555;
+	background-color: #F0E9CE;
+	box-shadow: 0px 5px 20px  #000000;
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -377,8 +316,8 @@
   padding: 5px 15px;
   text-decoration: none;
   background: transparent;
-  border: 2px solid #f27c7c;
-  color: #f27c7c;
+  border: 2px solid #C5BDDB;
+  color: #C5BDDB;
   display: inline-block;
   position: relative;
   text-transform: uppercase;
@@ -391,10 +330,10 @@
   -moz-transition: background 0.3s ease;
   -ms-transition: background 0.3s ease;
   transition: background 0.3s ease;
-  -webkit-box-shadow: 2px 2px 0 #f27c7c;
-  -moz-box-shadow: 2px 2px 0 #f27c7c;
-  -ms-box-shadow: 2px 2px 0 #f27c7c;
-  box-shadow: 2px 2px 0 #f27c7c;
+  -webkit-box-shadow: 2px 2px 0 #d5f7f2;
+  -moz-box-shadow: 2px 2px 0#d5f7f2;
+  -ms-box-shadow: 2px 2px 0 #d5f7f2;
+  box-shadow: 2px 2px 0 #d5f7f2;
 }
 .btn:hover {
   box-shadow: none;
@@ -413,52 +352,3 @@
 }
 
 }
-/*Skill section CSS*/
-
-/* Make sure that padding behaves as expected */
-* {box-sizing:border-box}
-
-/* Container for skill bars */
-.skill-container {
-    width: 100%; /* Full width */
-    margin-bottom: 6px;
-    background-color: #ddd;
-}
-
-.skills-text{
-  padding-left: 5px;
-}
-
-.skills { 
-    font-size: 17px;
-    padding-right: 20px; /* Add some right padding */
-    line-height: 18px; /* Set the line-height to center the text inside the skill bar, and to expand the height of the container */
-    color: white; /* White text color */
-}
-
-.language-c {width: 50%; background-color: #707070;} 
-.language-c-plus {width: 60%; background-color: #505050;} 
-.language-python {width: 80%; background-color: #505050;} 
-.language-c-sharp {width: 50%; background-color: #707070;} 
-.language-swift {width: 70%; background-color: #505050;}
-.language-java {width: 30%; background-color: #A0A0A0;} 
-.language-javascript {width: 50%; background-color: #808080;} 
-.angular {width: 20%; background-color: #A0A0A0;} 
-.jQuery {width: 40%; background-color: #808080;} 
-.dotnet {width: 50%; background-color: #808080;} 
-.framework-ios {width: 60%; background-color: #707070;} 
-.framework-phonegap {width: 35%; background-color: #808080;} 
-.databases {width: 40%; background-color: #808080;} 
-.framework-tensor{width: 30%; background-color: #A0A0A0;}
-.htmlcss {width: 50%; background-color: #808080;}
-
-.quotation{
-  color: black;
-  font-family: "Courier New", Courier, monospace;
-  padding-left: 2.5em;
-  padding-right: 2.5em;
-  padding-bottom: 2.5em;
-  font-size: 1.5em;
-  text-align: center;
-}
-

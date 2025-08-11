@@ -1,0 +1,42 @@
+---
+layout: page
+title: Welcome to my blog
+permalink: /blog/
+---
+<!DOCTYPE html>
+<html>
+
+
+
+<body class="body-class">
+    <!-- Begin Project Section -->
+    <div class="projects" id="projects-section">
+        <section class="resume-section">
+            <h1>
+                <div> Welcome to my blog </div>
+            </h1>
+        </section>
+
+        <!-- Left Positioned Posts -->
+        <div class="left">
+            {% for post in site.posts %}
+            {% if post.position == "left" %}
+            {% include blog-post.html post=post %}
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Right Positioned Posts -->
+        <div class="right">
+            {% for post in site.posts %}
+            {% if post.position == "right" %}
+            {% include blog-post.html post=post %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+<script type="text/javascript" src="{{ '/' | relative_url  }}assets/js/custom.js"></script>
+
+</html>

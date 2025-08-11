@@ -1,19 +1,19 @@
 
 <div class="sidebar">
   <div class="sidebar-logo" style="align:center">
-        <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Profile Image" style="width:150px; border-radius:50%;" />
+        <img src="{{ '/assets/images/profile-pic.jpg' | relative_url }}" alt="Profile Image" style="width:150px; border-radius:50%;" />
   </div>
   <div id="contact-list1" style="text-align:center">
     <!-- contact icons go here --> 
     {% if site.author.github %}
-      <a href="https://github.com/{{ site.author.github }}" target="_blank">
+      <a class="aicon" href="https://github.com/{{ site.author.github }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-github fa-stack-2x"></i>
           </span>
       </a>
     {% endif %}
     {% if site.author.linkedin %}
-      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
+      <a class="aicon" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
           <span class="fa-stack fa-medium">
               <i class="fab fa-linkedin fa-stack-2x"></i>
           </span>
@@ -31,14 +31,13 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == '/' | relative_url %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a>
 
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
       {% endcomment %}
 
-      {% assign pages_list = site.pages %}
+     <!-- {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
@@ -46,10 +45,14 @@
           {% endif %}
         {% endif %}
       {% endfor %}
+    -->
+      <a class="sidebar-nav-item{% if page.url == '/' | relative_url %} active{% endif %}" href="{{ '/' | relative_url }}"> Home</a>
       <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#skill-section">&nbsp&nbsp&nbsp&nbsp- Skills</a>
-      <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#timeline-section">&nbsp&nbsp&nbsp&nbsp- Experience</a>
-     <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#blog-section">&nbsp&nbsp&nbsp&nbsp- Blog</a>
+      <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#timeline-section">&nbsp&nbsp&nbsp&nbsp- Projects</a>
+      <a class="sidebar-nav-item{% if page.url == '/blog/' %}active{% endif %}" href="/blog/"> Blog </a>
+      <a class="sidebar-nav-item{% if page.url == '/contact/' %}active{% endif %}" href="/contact/"> Contact </a>
     </nav>
+  
 
     <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved.</p>
   </div>
@@ -61,17 +64,19 @@ var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
     loop: true
 });
-
-typewriter.typeString('I am a Data engineer')
+typewriter.typeString('I am a Freelance Data Engineer')
     .pauseFor(2500)
-    .deleteChars(13)
-    .typeString('Data architect')
+    .deleteChars(8)
+    .typeString('Platform Engineer')
     .pauseFor(2500)
-    .deleteChars(14)
-    .typeString('DataOps')
+    .deleteChars(17)
+    .typeString('Ops Engineer')
     .pauseFor(2500)
-    .deleteChars(7)
-    .typeString('Analytics engineer')
+    .deleteChars(12)
+    .typeString('Architect')
+    .pauseFor(2500)
+    .deleteChars(9)
+    .typeString('Analytics Engineer')
     .pauseFor(2500)
     .start();
 </script>
