@@ -49,8 +49,8 @@
       <a class="sidebar-nav-item{% if page.url == '/' | relative_url %} active{% endif %}" href="{{ '/' | relative_url }}"> Home</a>
       <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#skill-section">&nbsp&nbsp&nbsp&nbsp- Skills</a>
       <a class="sidebar-nav-item" style="text-decoration:none;" href="{{ '/' | relative_url }}#timeline-section">&nbsp&nbsp&nbsp&nbsp- Projects</a>
-      <a class="sidebar-nav-item{% if page.url == '/blog.html' %} active{% endif %}" href="{{ '/blog.html' | relative_url }}"> Blog </a>
-      <a class="sidebar-nav-item{% if page.url == '/contact.html' %} active{% endif %}" href="{{ '/contact.html' | relative_url }}"> Contact </a>
+      <!-- <a class="sidebar-nav-item{% if page.url == '/blog/' %}active{% endif %}" href="/blog/"> Blog </a> -->
+      <a class="sidebar-nav-item{% if page.url == '/contact/' %}active{% endif %}" href="{{ '/contact/' | relative_url }}"> Contact </a>
     </nav>
   
 
@@ -64,6 +64,7 @@ var app = document.getElementById('app');
 var typewriter = new Typewriter(app, {
     loop: true
 });
+
 typewriter.typeString('I am a Freelance Data Engineer')
     .pauseFor(2500)
     .deleteChars(8)
